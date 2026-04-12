@@ -28,7 +28,7 @@ const Hero = () => {
           className="hidden md:block w-full h-full object-cover"
         />
         <img
-          src="/images/hero_mb-bg.jpg"
+          src="/images/hero_mb-bg.webp"
           alt=""
           className="md:hidden w-full h-full object-cover"
         />
@@ -38,7 +38,7 @@ const Hero = () => {
       {isClient && !isMobile && (
         <motion.video
           className="absolute top-0 left-0 w-full aspect-1920/1080 object-cover"
-          src="/videos/pc-hero-vid.mp4"
+          src="/videos/pc-hero-vid.webm"
           autoPlay
           loop
           muted
@@ -55,7 +55,7 @@ const Hero = () => {
       {isClient && isMobile && (
         <motion.video
           className="absolute top-0 left-0 w-full aspect-640/1136 object-cover"
-          src="/videos/mb-hero-vid.mp4"
+          src="/videos/mb-hero-vid.webm"
           autoPlay
           loop
           muted
@@ -70,10 +70,10 @@ const Hero = () => {
       )}
 
       <div className="md:hidden relative w-full h-full flex flex-col items-center">
-        <img src="/images/logo-game.png" alt="" className="absolute top-[1%] left-[1%] w-[32.4%] object-contain" />
-        <img src="/images/hero_mb-title.png" alt="" className="z-10 mt-[20%] w-[86.53%] object-contain" />
-        <img src="/images/hero_mb-sub-text.png" alt="" className="-mt-[4%] w-[69.73%] object-contain" />
-        <img src="/images/hero_mb-time.png" alt="" className="absolute top-[19%] right-[10%] w-[11.2%] object-contain" />
+        <img src="/images/logo-game.webp" alt="" className="absolute top-[1%] left-[1%] w-[32.4%] object-contain" />
+        <img src="/images/hero_mb-title.webp" alt="" className="z-10 mt-[20%] w-[86.53%] object-contain" />
+        <img src="/images/hero_mb-sub-text.webp" alt="" className="-mt-[4%] w-[69.73%] object-contain" />
+        <img src="/images/hero_mb-time.webp" alt="" className="absolute top-[19%] right-[10%] w-[11.2%] object-contain" />
       </div>
     </section>
   );

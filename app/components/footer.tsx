@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <footer className="overflow-hidden relative w-full aspect-750/232 md:aspect-1920/298 bg-cover bg-center bg-no-repeat
-    bg-[url('/images/footer_mb-bg.jpg')] md:bg-[url('/images/footer_pc-bg.jpg')] flex flex-col items-center text-[#F9E4C0] [font-family:var(--font-roboto),Roboto,sans-serif]">
-      <img src="/images/logo-zagoo.png" alt="" className="mt-[1%] w-[15.33%] md:w-[10.10%] object-contain" />
+    bg-[url('/images/footer_mb-bg.webp')] md:bg-[url('/images/footer_pc-bg.webp')] flex flex-col items-center text-[#F9E4C0] [font-family:var(--font-roboto),Roboto,sans-serif]">
+      <img src="/images/logo-zagoo.webp" alt="" className="mt-[1%] w-[15.33%] md:w-[10.10%] object-contain" />
       {/* PC */}
       <div className="hidden md:flex mt-[1%] font-medium flex-col items-center text-center text-[1vw] leading-relaxed px-[10%]">
         <p>Công ty TNHH Giải Trí ZIE.</p>

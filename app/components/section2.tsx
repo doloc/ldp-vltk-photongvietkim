@@ -5,13 +5,13 @@ const checkedInDays = [1, 2, 3, 5];
 const Section2 = () => {
   return (
     <section className="relative -mt-[1%] md:mt-0 w-full aspect-750/1334 md:aspect-1920/1080 bg-cover bg-center bg-no-repeat
-    bg-[url('/images/section2_mb-bg.jpg')] md:bg-[url('/images/section2_pc-bg.jpg')] flex flex-col items-center">
-      <img src="/images/section2_title.png" alt="" className="mt-[2%] md:mt-0 w-full md:w-[48.75%] object-contain" />
+    bg-[url('/images/section2_mb-bg.webp')] md:bg-[url('/images/section2_pc-bg.webp')] flex flex-col items-center">
+      <img src="/images/section2_title.webp" alt="" className="mt-[2%] md:mt-0 w-full md:w-[48.75%] object-contain" />
       {/* Mobile */}
       <div className="grid md:hidden w-[86.13%] grid-cols-[65.33%_1fr] gap-[3%]">
         <div className="flex flex-col items-center justify-between">
           <div className="relative w-full aspect-586/618 bg-cover bg-center bg-no-repeat
-            bg-[url('/images/section2_pc-fr.png')] flex items-center justify-center">
+            bg-[url('/images/section2_pc-fr.webp')] flex items-center justify-center">
             <div className="w-[73%] h-[82%] grid grid-cols-3 gap-x-[10%] gap-y-[5%] content-start">
               {Array.from({ length: 12 }, (_, i) => {
                 const day = i + 1;
@@ -19,7 +19,7 @@ const Section2 = () => {
                 return (
                   <div
                     key={day}
-                    className={`relative aspect-117/110 bg-cover bg-center bg-no-repeat bg-[url('/images/section2_fr-bg.png')] flex items-center justify-center
+                    className={`relative aspect-117/110 bg-cover bg-center bg-no-repeat bg-[url('/images/section2_fr-bg.webp')] flex items-center justify-center
                       ${checked ? "brightness-75" : ""}`}
                   >
                     <span className="text-white font-bold text-[2vw] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{day}</span>
@@ -33,9 +33,9 @@ const Section2 = () => {
           </div>
         </div>
         <div className="w-full flex flex-col items-between justify-center gap-[8%]">
-          <img src="/images/section2_btn-history.png" alt="" className="w-full object-contain img-btn" />
-          <img src="/images/section2_btn-checkin.png" alt="" className="w-full object-contain img-btn" />
-          <img src="/images/section2_btn-rule.png" alt="" className="w-full object-contain img-btn" />
+          <img src="/images/section2_btn-history.webp" alt="" className="w-full object-contain img-btn" />
+          <img src="/images/section2_btn-checkin.webp" alt="" className="w-full object-contain img-btn" />
+          <img src="/images/section2_btn-rule.webp" alt="" className="w-full object-contain img-btn" />
         </div>
       </div>
       <div className="md:hidden mt-[2%] w-[86.13%] grid grid-cols-[65.33%_1fr]">
@@ -67,7 +67,7 @@ const Section2 = () => {
         <div className="flex flex-col items-center justify-between">
           <p className="text-[1.8vw] text-[#6B1A10] text-center">Đại Hiệp đang có <span className="text-[#DE2E17]">xxx</span> sát thương</p>
           <div className="relative w-[83.7%] aspect-586/618 bg-cover bg-center bg-no-repeat
-            bg-[url('/images/section2_pc-fr.png')] flex items-center justify-center">
+            bg-[url('/images/section2_pc-fr.webp')] flex items-center justify-center">
             <div className="w-[73%] h-[82%] grid grid-cols-3 gap-x-[10%] gap-y-[5%] content-start">
               {Array.from({ length: 12 }, (_, i) => {
                 const day = i + 1;
@@ -75,7 +75,7 @@ const Section2 = () => {
                 return (
                   <div
                     key={day}
-                    className={`relative aspect-117/110 bg-cover bg-center bg-no-repeat bg-[url('/images/section2_fr-bg.png')] flex items-center justify-center
+                    className={`relative aspect-117/110 bg-cover bg-center bg-no-repeat bg-[url('/images/section2_fr-bg.webp')] flex items-center justify-center
                       ${checked ? "brightness-75" : ""}`}
                   >
                     <span className="text-white font-bold text-[2vw] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{day}</span>
@@ -88,9 +88,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="w-full flex items-between justify-center">
-            <img src="/images/section2_btn-history.png" alt="" className="w-[32.43%] object-contain img-btn" />
-            <img src="/images/section2_btn-checkin.png" alt="" className="w-[32.43%] object-contain img-btn" />
-            <img src="/images/section2_btn-rule.png" alt="" className="w-[32.43%] object-contain img-btn" />
+            <img src="/images/section2_btn-history.webp" alt="" className="w-[32.43%] object-contain img-btn" />
+            <img src="/images/section2_btn-checkin.webp" alt="" className="w-[32.43%] object-contain img-btn" />
+            <img src="/images/section2_btn-rule.webp" alt="" className="w-[32.43%] object-contain img-btn" />
           </div>
         </div>
         <div className="flex flex-wrap gap-y-[3%] gap-x-[3.8%] content-start justify-center pt-[2%]">
