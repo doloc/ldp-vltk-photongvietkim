@@ -69,12 +69,12 @@ const Hero = () => {
         />
       )}
 
-      <div className="md:hidden relative w-full h-full flex flex-col items-center">
+      {/* <div className="md:hidden relative w-full h-full flex flex-col items-center">
         <img src="/images/logo-game.webp" alt="" className="absolute top-[1%] left-[1%] w-[32.4%] object-contain" />
         <img src="/images/hero_mb-title.webp" alt="" className="z-10 mt-[20%] w-[86.53%] object-contain" />
         <img src="/images/hero_mb-sub-text.webp" alt="" className="-mt-[4%] w-[69.73%] object-contain" />
         <img src="/images/hero_mb-time.webp" alt="" className="absolute top-[19%] right-[10%] w-[11.2%] object-contain" />
-      </div>
+      </div> */}
     </section>
   );
 };
