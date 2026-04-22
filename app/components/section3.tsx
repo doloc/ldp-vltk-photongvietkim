@@ -1,5 +1,8 @@
 "use client";
 import { useState, useRef } from "react";
+import ModalGetTicket from "./modal-get-ticket";
+import ModalHistoryFight from "./modal-history-fight";
+import ModalRuleFight from "./modal-rule-fight";
 
 const TOTAL = 6;
 
@@ -9,6 +12,9 @@ const Section3 = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [winner, setWinner] = useState<number | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [showPopupGetTicket, setShowPopupGetTicket] = useState(false);
+  const [showPopupHistoryFight, setShowPopupHistoryFight] = useState(false);
+  const [showPopupRuleFight, setShowPopupRuleFight] = useState(false);
 
   const handleFight = () => {
     if (spinning) return;
@@ -47,14 +53,15 @@ const Section3 = () => {
   };
 
   return (
+    <>
     <section className="relative w-full aspect-750/1334 md:aspect-1920/1080 bg-cover bg-center bg-no-repeat
     bg-[url('/images/section3_mb-bg.webp')] md:bg-[url('/images/section3_pc-bg.webp')] flex flex-col items-center">
       <img src="/images/section3_pc-title.webp" alt="" className="hidden md:block mt-[1%] w-[63.18%] object-contain" />
       <img src="/images/section3_mb-title.webp" alt="" className="md:hidden mt-[2%] md:mt-[1%] w-full object-contain" />
       <div className="z-10 -mt-[2%] w-[77.47%] md:w-[36.56%] flex items-center justify-between">
-        <img src="/images/section2_btn-history.webp" alt="" className="w-[32.33%] object-contain img-btn" />
-        <img src="/images/section3_btn-receive-ticket.webp" alt="" className="w-[32.33%] object-contain img-btn" />
-        <img src="/images/section2_btn-rule.webp" alt="" className="w-[32.33%] object-contain img-btn" />
+        <img src="/images/section2_btn-history.webp" alt="" className="w-[32.33%] object-contain img-btn" onClick={() => setShowPopupHistoryFight(true)} />
+        <img src="/images/section3_btn-receive-ticket.webp" alt="" className="w-[32.33%] object-contain img-btn" onClick={() => setShowPopupGetTicket(true)} />
+        <img src="/images/section2_btn-rule.webp" alt="" className="w-[32.33%] object-contain img-btn" onClick={() => setShowPopupRuleFight(true)} />
       </div>
       <div className="z-10 -mt-[1%] w-[77.87%] md:w-[38.72%] aspect-705/113 flex items-center justify-center bg-cover bg-center bg-no-repeat
       bg-[url('/images/section3_sub-text.webp')]">
@@ -90,7 +97,20 @@ const Section3 = () => {
           </div>
         </div>
       )}
+
+      {showPopupGetTicket && (
+        <ModalGetTicket setShowPopup={setShowPopupGetTicket} />
+      )}
+
+      {showPopupHistoryFight && (
+        <ModalHistoryFight setShowPopup={setShowPopupHistoryFight} />
+      )}
+
+      {showPopupRuleFight && (
+        <ModalRuleFight setShowPopup={setShowPopupRuleFight} />
+      )}
     </section>
+    </>
   );
 };
 

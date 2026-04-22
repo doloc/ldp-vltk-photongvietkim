@@ -1,8 +1,14 @@
+import { useState } from "react";
 import Card from "./card";
+import ModalRule from "./modal-rule";
+import ModalHistoryCheckin from "./modal-history-checkin";
 
 const checkedInDays = [1, 2, 3, 5];
 
 const Section2 = () => {
+  const [showPopupRule, setShowPopupRule] = useState(false);
+  const [showPopupHistoryCheckin, setShowPopupHistoryCheckin] = useState(false);
+  
   return (
     <section className="relative -mt-[1%] md:mt-0 w-full aspect-750/1334 md:aspect-1920/1080 bg-cover bg-center bg-no-repeat
     bg-[url('/images/section2_mb-bg.webp')] md:bg-[url('/images/section2_pc-bg.webp')] flex flex-col items-center">
@@ -33,9 +39,9 @@ const Section2 = () => {
           </div>
         </div>
         <div className="w-full flex flex-col items-between justify-center gap-[8%]">
-          <img src="/images/section2_btn-history.webp" alt="" className="w-full object-contain img-btn" />
+          <img src="/images/section2_btn-history.webp" alt="" className="w-full object-contain img-btn" onClick={() => setShowPopupHistoryCheckin(true)} />
           <img src="/images/section2_btn-checkin.webp" alt="" className="w-full object-contain img-btn" />
-          <img src="/images/section2_btn-rule.webp" alt="" className="w-full object-contain img-btn" />
+          <img src="/images/section2_btn-rule.webp" alt="" className="w-full object-contain img-btn" onClick={() => setShowPopupRule(true)} />
         </div>
       </div>
       <div className="md:hidden mt-[2%] w-[86.13%] grid grid-cols-[65.33%_1fr]">
@@ -44,7 +50,7 @@ const Section2 = () => {
             <div className="flex flex-wrap gap-y-[3%] gap-x-[3.8%] content-start justify-center pt-[2%]">
               {Array.from({ length: 5 }, (_, i) => (
                 <div key={i} className="w-[48.1%] mt-[5%]">
-                  <Card point={i == 0 ? 500000 : i == 1 ? 1000000 : i == 2 ? 2000000 : i == 3 ? 5000000 : 10000000} />
+                  <Card point={i == 0 ? 300000 : i == 1 ? 600000 : i == 2 ? 1000000 : i == 3 ? 2000000 : 5000000} />
                 </div>
               ))}
             </div>
@@ -88,19 +94,27 @@ const Section2 = () => {
             </div>
           </div>
           <div className="w-full flex items-between justify-center">
-            <img src="/images/section2_btn-history.webp" alt="" className="w-[32.43%] object-contain img-btn" />
+            <img src="/images/section2_btn-history.webp" alt="" className="w-[32.43%] object-contain img-btn" onClick={() => setShowPopupHistoryCheckin(true)} />
             <img src="/images/section2_btn-checkin.webp" alt="" className="w-[32.43%] object-contain img-btn" />
-            <img src="/images/section2_btn-rule.webp" alt="" className="w-[32.43%] object-contain img-btn" />
+            <img src="/images/section2_btn-rule.webp" alt="" className="w-[32.43%] object-contain img-btn" onClick={() => setShowPopupRule(true)} />
           </div>
         </div>
         <div className="flex flex-wrap gap-y-[3%] gap-x-[3.8%] content-start justify-center pt-[2%]">
           {Array.from({ length: 5 }, (_, i) => (
             <div key={i} className="w-[48.1%]">
-              <Card point={i == 0 ? 500000 : i == 1 ? 1000000 : i == 2 ? 2000000 : i == 3 ? 5000000 : 10000000} />
+              <Card point={i == 0 ? 300000 : i == 1 ? 600000 : i == 2 ? 1000000 : i == 3 ? 2000000 : 5000000} />
             </div>
           ))}
         </div>
       </div>
+
+      {showPopupRule && (
+        <ModalRule setShowPopup={setShowPopupRule} />
+      )}
+
+      {showPopupHistoryCheckin && (
+        <ModalHistoryCheckin setShowPopup={setShowPopupHistoryCheckin} />
+      )}
     </section>
   );
 };

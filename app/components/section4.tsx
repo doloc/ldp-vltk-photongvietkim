@@ -1,12 +1,21 @@
+"use client";
+
+import { useState } from "react";
+import ModalRankingReward from "./modal-ranking-reward";
+import ModalRulleRanking from "./modal-rulle-ranking";
+
 const Section4 = () => {
+  const [showPopupRankingReward, setShowPopupRankingReward] = useState(false);
+  const [showPopupRulleRanking, setShowPopupRulleRanking] = useState(false);
+
   return (
     <section className="relative w-full aspect-750/1102 md:aspect-1920/1914 bg-cover bg-center bg-no-repeat
     bg-[url('/images/section4_mb-bg.webp')] md:bg-[url('/images/section4_pc-bg.webp')] flex flex-col items-center">
       <img src="/images/section4_pc-title.webp" alt="" className="hidden md:block w-[63.18%] object-contain" />
       <img src="/images/section4_mb-title.webp" alt="" className="mt-[4%] md:hidden w-full object-contain" />
       <div className="z-10 -mt-[1%] w-[51.73%] md:w-[25.63%] aspect-492/58 flex items-center justify-between">
-        <img src="/images/section4_btn-reward.webp" alt="" className="w-[51.22%] object-contain img-btn" />
-        <img src="/images/section4_btn-reward.webp" alt="" className="w-[46.13%] object-contain img-btn" />
+        <img src="/images/section4_btn-reward.webp" alt="" className="w-[51.22%] object-contain img-btn" onClick={() => setShowPopupRankingReward(true)}  />
+        <img src="/images/section2_btn-rule.webp" alt="" className="w-[46.13%] object-contain img-btn" onClick={() => setShowPopupRulleRanking(true)} />
       </div>
       <div className="z-10 -mt-[1%] w-[74.13%] md:w-[38.72%] aspect-705/113 flex items-center justify-center bg-cover bg-center bg-no-repeat
       bg-[url('/images/section3_sub-text.webp')]">
@@ -52,6 +61,14 @@ const Section4 = () => {
           </div>
         ))}
       </div>
+
+      {showPopupRankingReward && (
+        <ModalRankingReward setShowPopup={setShowPopupRankingReward} />
+      )}
+
+      {showPopupRulleRanking && (
+        <ModalRulleRanking setShowPopup={setShowPopupRulleRanking} />
+      )}
     </section>
   );
 };
